@@ -30,6 +30,8 @@ This project collects the outputs from conversations in the Slack [#KPIs room](h
 * % of spend that is untaggable 
 * Hours between cost incurred and cost displayed to end team
 * Frequency of data updates
+* Avg price per hour of compute
+* Unit cost (spend divided by a business metric)
 
 
 ## Planned Projects
@@ -41,3 +43,7 @@ This project collects the outputs from conversations in the Slack [#KPIs room](h
 ## Related Links
 
 * https://www.finops.org/blog/setting-finops-goals-okrs/
+* https://www.finops.org/blog/optimization-kpis-rightsizing-workflows/
+* https://www.oreilly.com/library/view/cloud-finops/9781492054610/ch16.html
+
+
