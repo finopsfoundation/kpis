@@ -1,0 +1,229 @@
+%YAML 1.2
+---
+id: ws_aws_asg_no_scaling
+type: waste-sensor
+cloud_provider: aws
+description: Auto scaling group statically configured
+comment: No cost avoidance if no other saling conditions are attached to the ASG and the same value for minimum, maximum, and desired capacity is used.
+---
+id: ws_aws_cache_red_family
+type: waste-sensor
+cloud_provider: aws
+description: ElastiCache not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_cache_red_region
+type: waste-sensor
+cloud_provider: aws
+description: ElastiCache not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_cache_util_low
+type: waste-sensor
+cloud_provider: aws
+description: ElastiCache low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_ddb_no_scaling
+type: waste-sensor
+cloud_provider: aws
+description: DynamoDB provisioned read/write capacity not auto scaling
+comment: No cost avoidance if the provisioned read/write capacity does not change over time.
+---
+id: ws_aws_ddb_red_region
+type: waste-sensor
+cloud_provider: aws
+description: DynamoDB not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ddb_util_low
+type: waste-sensor
+cloud_provider: aws
+description: DynamoDB provisioned read/write capacity low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_aws_ec2_no_asg
+type: waste-sensor
+cloud_provider: aws
+description: EC2 instance not in auto scaling group
+comment: No cost avoidance as the provisioned resource cannot scale based on demand.
+---
+id: ws_aws_ec2_red_family
+type: waste-sensor
+cloud_provider: aws
+description: EC2 not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ec2_red_network
+type: waste-sensor
+cloud_provider: aws
+description: EC2 not in green network configuration
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ec2_red_os
+type: waste-sensor
+cloud_provider: aws
+description: EC2 not in green operating system
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ec2_red_region
+type: waste-sensor
+cloud_provider: aws
+description: EC2 not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ec2_red_tenancy
+type: waste-sensor
+cloud_provider: aws
+description: EC2 not in green tenancy
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_ec2_util_low
+type: waste-sensor
+cloud_provider: aws
+description: EC2 low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_eip_unassigned
+type: waste-sensor
+cloud_provider: aws
+description: EIP not assigned to EC2
+comment: Elastic IP address only incurs a cost if they are not attached to an EC2 instance.
+---
+id: ws_aws_emr_red_family
+type: waste-sensor
+cloud_provider: aws
+description: EMR not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_emr_red_region
+type: waste-sensor
+cloud_provider: aws
+description: EMR not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_es_red_family
+type: waste-sensor
+cloud_provider: aws
+description: Elasticsearch not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_es_red_region
+type: waste-sensor
+cloud_provider: aws
+description: Elasticsearch not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_es_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Elasticsearch low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_iops_util_low
+type: waste-sensor
+cloud_provider: aws
+description: IOPS low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_aws_lb_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Load Balancer idle
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_aws_pod_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Container/Pod low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_aws_rds_red_family
+type: waste-sensor
+cloud_provider: aws
+description: RDS not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_rds_red_region
+type: waste-sensor
+cloud_provider: aws
+description: RDS not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_rds_util_low
+type: waste-sensor
+cloud_provider: aws
+description: RDS low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_rs_red_family
+type: waste-sensor
+cloud_provider: aws
+description: Redshift not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_rs_red_region
+type: waste-sensor
+cloud_provider: aws
+description: Redshift not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_rs_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Redshift low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_s3_int_not_active
+type: waste-sensor
+cloud_provider: aws
+description: S3 Intelligent Tiering not enabled
+comment: Potential cost avoidance by using a managed service that moves infrequently accessed S3 objects to a lower cost storage tier.
+---
+id: ws_aws_s3_no_mgmt_policy
+type: waste-sensor
+cloud_provider: aws
+description: S3 life-cycle management not enabled
+comment: Potential cost avoidance by moving S3 objects to colder storage offerings.
+---
+id: ws_aws_s3_ver_no_mgmt
+type: waste-sensor
+cloud_provider: aws
+description: S3 versioning enabled with no life-cycle policy
+comment: Potential cost avoidance by deleting older objects from the version history.
+---
+id: ws_aws_sm_red_family
+type: waste-sensor
+cloud_provider: aws
+description: SageMaker not in green family
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_sm_red_region
+type: waste-sensor
+cloud_provider: aws
+description: SageMaker not in green region
+comment: No discounts through prepayment products can be realized as these are only purchased in green zones.
+---
+id: ws_aws_sm_util_low
+type: waste-sensor
+cloud_provider: aws
+description: SageMaker low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+---
+id: ws_aws_snapshot_no_mgmt_policy
+type: waste-sensor
+cloud_provider: aws
+description: Snapshot life-cycle management not enabled
+comment: Potential cost avoidance by life-cycle managing old snapshots.
+---
+id: ws_aws_volume_unattached
+type: waste-sensor
+cloud_provider: aws
+description: EBS unattached
+comment: Potential cost avoidance by life-cycle managing persistently unattached EBS volumes.
+---
+id: ws_aws_volume_util_low
+type: waste-sensor
+cloud_provider: aws
+description: EBS low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
