@@ -4,7 +4,7 @@ This project collects definitions for potential unrealized savings opportunities
 
 ## Usage
 
-Tools implement their own visualization and remediation code and use the *id* key to get the descriptions from GitHub to be displayed in the user-interface. This is to standardized terms across the FinOps domain. The *id* key is not intended to change over time, however tools should periodically check if the *id* key for a specific implementation still exists on GitHub and raise an exception if it doesn't.
+Tools implement their own visualization and remediation code and use the *id* key to get the descriptions from GitHub to be displayed in the user-interface. This is to standardize terms across the FinOps domain. The *id* key is not intended to change over time, however tools should periodically check if the *id* key for a specific implementation still exists on GitHub and raise an exception if it doesn't.
 
 ## Waste KPIs
 
