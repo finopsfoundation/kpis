@@ -1,18 +1,18 @@
 # waste-sensors
 
-This project collects potential unrealized savings opportunities, also called waste sensors.
+This project collects definitions for potential unrealized savings opportunities, also called waste sensors. Developers are encouraged to contribute new sensors and make enhancements to existing ones.
 
 ## Usage
 
-Tools implement their own visualization and remediation code and use the id key to get the descriptions to be displayed in the user-interface from GitHub. This is to standardized terms across the FinOps domain. The id key is not intended to change over time, however tools should periodically check if the id key for a specific implementation still exists on GitHub and raise an exception if it doesn't.
+Tools implement their own visualization and remediation code and use the**id**key to get the descriptions from GitHub to be displayed in the user-interface. This is to standardized terms across the FinOps domain. The**id**key is not intended to change over time, however tools should periodically check if the**id**key for a specific implementation still exists on GitHub and raise an exception if it doesn't.
 
 ## Waste KPIs
 
 Waste key performance indicators (KPIs) are typically displayed in an aggregated context filtered by tags like account, application, business unit, employee, environment, project and so on.
 
 Each waste sensor aggregates a type of unrealized savings opportunities into two types of KPIs:
-Savings Opportunity
-Waste Percentage
+- Savings Opportunity
+- Waste Percentage
 
 When listing multiple waste sensors it is recommended to sort the list by the largest savings opportunity on the top. This gives users the most impactful recommendations first.
 
