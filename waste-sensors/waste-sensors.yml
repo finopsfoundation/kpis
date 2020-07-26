@@ -24,6 +24,18 @@ cloud_provider: aws
 description: ElastiCache low utilization
 comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
 ---
+id: ws_aws_ct_duplicate
+type: waste-sensor
+cloud_provider: aws
+description: More than one CloudTrail trail exists
+comment: Potential cost avoidance by eliminating redudant CloudTrail trails as only the first trail is free of charge.
+---
+id: ws_aws_cw_log_no_mgmt_policy
+type: waste-sensor
+cloud_provider: aws
+description: CloudWatch logs with no log retention period
+comment: Potential cost avoidance by deleting older logs.
+---
 id: ws_aws_ddb_no_scaling
 type: waste-sensor
 cloud_provider: aws
@@ -84,10 +96,16 @@ cloud_provider: aws
 description: EC2 low utilization
 comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
 ---
-id: ws_aws_eip_unassigned
+id: ws_aws_efs_no_mgmt_policy
 type: waste-sensor
 cloud_provider: aws
-description: EIP not assigned to EC2
+description: EFS life-cycle management not enabled
+comment: Potential cost avoidance by moving EFS files to colder storage offerings.
+---
+id: ws_aws_eip_unattached
+type: waste-sensor
+cloud_provider: aws
+description: EIP not attached to EC2
 comment: Elastic IP address only incurs a cost if they are not attached to an EC2 instance.
 ---
 id: ws_aws_emr_red_family
@@ -120,22 +138,28 @@ cloud_provider: aws
 description: Elasticsearch low utilization
 comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
 ---
+id: ws_aws_glue_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Glue Data Processing Units low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
 id: ws_aws_iops_util_low
 type: waste-sensor
 cloud_provider: aws
 description: IOPS low utilization
 comment: Potential cost avoidance as provisioned capacity is underutilized.
 ---
+id: ws_aws_lambda_util_low
+type: waste-sensor
+cloud_provider: aws
+description: Lambda provisioned concurrency low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
 id: ws_aws_lb_util_low
 type: waste-sensor
 cloud_provider: aws
 description: Load Balancer idle
-comment: Potential cost avoidance as provisioned capacity is underutilized.
----
-id: ws_aws_pod_util_low
-type: waste-sensor
-cloud_provider: aws
-description: Container/Pod low utilization
 comment: Potential cost avoidance as provisioned capacity is underutilized.
 ---
 id: ws_aws_rds_red_family
@@ -227,3 +251,33 @@ type: waste-sensor
 cloud_provider: aws
 description: EBS low utilization
 comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_k8s_control_plane_util_low
+type: waste-sensor
+cloud_provider: independent
+description: Kubernetes master node low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_k8s_dedicated_util_low
+type: waste-sensor
+cloud_provider: independent
+description: Kubernetes dedicated nodes low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_k8s_node_util_low
+type: waste-sensor
+cloud_provider: independent
+description: Kubernetes node low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_k8s_pod_util_low
+type: waste-sensor
+cloud_provider: independent
+description: Kubernetes pod low utilization
+comment: Potential cost avoidance as provisioned capacity is underutilized.
+---
+id: ws_splunk_no_mgmt_policy
+type: waste-sensor
+cloud_provider: independent
+description: Splunk index with no data retirement and archiving policy
+comment: Potential cost avoidance by controlling the size of indexes or the age of data in indexes.
