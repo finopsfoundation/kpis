@@ -33,3 +33,15 @@ The waste percentage represents how much of a workload is in an unoptimized stat
 Let's say we have two m4.xlarge running in an account. There are no discounts, fees, or prepayment products in effect. An m4.xlarge cost $0.20/hr and an m5.xlarge costs $0.192/hr. The total monthly spend on EC2 in the account is 2 * $0.20 * 24 * 30.5 = $292.80. The savings opportunity is 2 * ( $0.20 - 0.192 ) * 24 * 30.5 = $11.712. The waste percentage is $11.712 / $292.80 = 4%.
 
 If we migrate only one m4.xlarge to m5.xlarge we get a new total monthly spend on EC2 in the account of $0.20 * 24 * 30.5 + $0.192 * 24 * 30.5 = $286.944. The new savings opportunity is now ( $0.20 - 0.192 ) * 24 * 30.5 = $5.856. The new waste percentage is now $5.856 / $286.944 = 2.04%.
+
+## Waste Goal
+
+Specific goals can be set across the organization using Waste KPIs. For example a good starting point is to target a Waste Percentage of 5 percent or less for all workloads in the cloud. These goals can be further customized by tags like account, application, business unit etc.
+
+## Waste Tracking
+
+The performance of workloads toward Waste Goals can be tracked over time. For example the monthly Waste Percentage over the last 12 months can be graphed in conjunction with the target Waste Goal. This allows discussion of trending over time rather than being limited to a snapshot in time.
+
+## Waste Exceptions
+
+Occasionally it may be necessary to grant certain workloads an exception from waste sensor tracking. For example Cassandra clusters are not easily auto scaled and a temporary exception for e.g. 12 months may be appropriate until the team can migrate to a more cloud native workload. These exceptions should be tracked separately to provide leadership visibility into what is currently exempt and needs to be optimized at a later time.
