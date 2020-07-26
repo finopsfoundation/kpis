@@ -6,6 +6,34 @@ This project collects definitions for potential unrealized savings opportunities
 
 Tools implement their own visualization and remediation code and use the *id* key to get the descriptions from GitHub to be displayed in the user-interface. This is to standardize terms across the FinOps domain. The *id* key is not intended to change over time, however tools should periodically check if the *id* key for a specific implementation still exists on GitHub and raise an exception if it doesn't.
 
+## Keys
+
+### id
+
+The *id* value is considered immutable and uniquely identifies a waste sensor. It is normal for a waste sensor to exist on GitHub and not be implemented by a tool. This means the tool does not yet support the waste sensor. If a tool implemented a waste sensor and the *id* value is not on GitHub, then the CI/CD pipeline should raise an exception and the engineer should either add the waste sensor to GitHub or adjust the *id* value in the tool to match GitHub.
+
+### display_name
+
+This is the short name to be displayed by tools. The *display_name* value is derived from the *id* value and adjusted for proper capitalization.
+
+### type
+
+This is the type of sensor. The *type* value is usually the string "waste-sensor". The key was added for extensibility for other types of sensors that do not readily classify as waste e.g. prepayment product in red zone.
+
+### cloud_provider
+
+The *cloud_provider* value is a set of strings e.g. "aws", "gcp", "azure", "vmcloud", "oracle", "ibm", "alibaba", "rackspace" etc.
+
+The value "independent" is used for waste sensors that are not specific to a cloud provider such as Kubernetes, Splunk etc. As with all waste sensors, the savings opportunity must not overlap with other waste sensors to avoid double counting. For example if Kubernetes runs on EC2, Kubernetes underutilization has to be removed from EC2 underutilization by e.g. using tags.
+
+### description
+
+The *description* value is a short help text that can be displayed by tools in a tooltip.
+
+### comment
+
+The *comment* value is a longer description explaining the savings opportunity in a little more detail e.g. cost avoidance or no discount through prepayment products.
+
 ## Waste KPIs
 
 Waste key performance indicators (KPIs) are typically displayed in an aggregated context filtered by tags like account, application, business unit, employee, environment, project and so on.
