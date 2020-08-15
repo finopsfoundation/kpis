@@ -279,6 +279,13 @@ cloud_provider: aws
 description: Snapshot life-cycle management not enabled
 comment: Potential cost avoidance by life-cycle managing old snapshots.
 ---
+id: ws_aws_vpn_no_tunnel
+display_name: AWS VPN No Tunnel
+type: waste-sensor
+cloud_provider: aws
+description: VPN has no associated tunnels
+comment: Potential cost avoidance as the provisioned VPN has no associated tunnels.
+---
 id: ws_aws_volume_unattached
 display_name: AWS Volume Unattached
 type: waste-sensor
