@@ -338,6 +338,6 @@ comment: Potential cost avoidance by controlling the size of indexes or the age 
 id: ws_vm_util_low
 display_name: Virtual Machine Util Low
 type: waste-sensor
-cloud_provider: aws, azure, google, oracle, ibm
+cloud_provider: [ aws, azure, google, oracle, ibm ]
 description: Virtual Machine low utilization
 comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
