@@ -309,6 +309,13 @@ cloud_provider: azure
 description: storage account life-cycle management not enabled
 comment: Potential cost avoidance by moving storage account objects to colder storage offerings.
 # Google Specific Waste Sensors
+---
+id: ws_google_idle_custom_image
+display_name: Google Idle Custom Image
+type: waste-sensor
+cloud_provider: google
+description: custom image not used in 15 days and not used in a template
+comment: Potential cost avoidance by deleting custom images not in use.
 # Multi-Cloud Waste Sensors
 ---
 id: ws_vm_util_low
@@ -354,4 +361,3 @@ type: waste-sensor
 cloud_provider: independent
 description: Splunk index with no data retirement and archiving policy
 comment: Potential cost avoidance by controlling the size of indexes or the age of data in indexes.
-
