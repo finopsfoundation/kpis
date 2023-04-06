@@ -53,8 +53,9 @@ This project collects the outputs from conversations in the Slack [#KPIs room](h
 
 ## Related Links
 
-* https://www.finops.org/blog/setting-finops-goals-okrs/
-* https://www.finops.org/blog/optimization-kpis-rightsizing-workflows/
+* https://github.com/finopsfoundation/kpis
+* https://www.finops.org/framework/capabilities
+* https://finopspod.captivate.fm/episode/zach-stitham-driving-finops-culture-through-kpis
 * https://www.oreilly.com/library/view/cloud-finops/9781492054610/ch16.html
 
 
