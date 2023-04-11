@@ -1,10 +1,11 @@
+# AWS Specific Waste Sensors
 ---
 id: ws_aws_asg_no_scaling
 display_name: AWS ASG No Scaling
 type: waste-sensor
 cloud_provider: aws
 description: Auto scaling group statically configured
-comment: No cost avoidance if no other saling conditions are attached to the ASG and the same value for minimum, maximum, and desired capacity is used.
+comment: No cost avoidance if no other scaling conditions are attached to the ASG and the same value for minimum, maximum, and desired capacity is used.
 ---
 id: ws_aws_cache_red_family
 display_name: AWS Cache Red Family
@@ -32,7 +33,7 @@ display_name: AWS CloudTrail Duplicate
 type: waste-sensor
 cloud_provider: aws
 description: More than one CloudTrail trail exists
-comment: Potential cost avoidance by eliminating redudant CloudTrail trails as only the first trail is free of charge.
+comment: Potential cost avoidance by eliminating redundant CloudTrail trails as only the first trail is free of charge.
 ---
 id: ws_aws_cw_log_no_mgmt_policy
 display_name: AWS CloudWatch No Mgmt
@@ -299,6 +300,31 @@ type: waste-sensor
 cloud_provider: aws
 description: EBS low utilization
 comment: Potential cost avoidance as provisioned capacity is underutilized.
+# Azure Specific Waste Sensor
+---
+id: ws_azure_storage_account_no_mgmt_policy
+display_name: Azure Storage Account No Mgmt Policy
+type: waste-sensor
+cloud_provider: azure
+description: storage account life-cycle management not enabled
+comment: Potential cost avoidance by moving storage account objects to colder storage offerings.
+# Google Specific Waste Sensors
+---
+id: ws_google_idle_custom_image
+display_name: Google Idle Custom Image
+type: waste-sensor
+cloud_provider: google
+description: custom image not used in 15 days and not used in a template
+comment: Potential cost avoidance by deleting custom images not in use.
+# Multi-Cloud Waste Sensors
+---
+id: ws_vm_util_low
+display_name: Virtual Machine Util Low
+type: waste-sensor
+cloud_provider: [ aws, azure, google, oracle, ibm ]
+description: Virtual Machine low utilization
+comment: Potential cost avoidance as a smaller size exists and the provisioned resource is underutilized.
+# Kubernetes Waste Sensors
 ---
 id: ws_k8s_control_plane_util_low
 display_name: K8S Control Plane Util Low
@@ -327,6 +353,7 @@ type: waste-sensor
 cloud_provider: independent
 description: Kubernetes pod low utilization
 comment: Potential cost avoidance as provisioned capacity is underutilized.
+#Splunk Specific Waste Sensors
 ---
 id: ws_splunk_no_mgmt_policy
 display_name: Splunk No Mgmt
